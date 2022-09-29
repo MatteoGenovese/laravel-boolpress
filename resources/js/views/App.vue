@@ -1,16 +1,19 @@
 <template>
     <section>
-        <MainComponent />
+        <HeaderComponent />
+
+        <router-view></router-view>
+
     </section>
 </template>
 
 <script>
 
-    import MainComponent from '../components/Main.vue';
+    import HeaderComponent from '../components/HeaderComponent.vue';
 
 export default {
     components:{
-        MainComponent
+        HeaderComponent
     }
 };
 </script>

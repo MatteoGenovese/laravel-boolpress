@@ -37367,8 +37367,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/matteogenovese/Programmazione/Boolean/61_laravel-api/laravel-api/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/matteogenovese/Programmazione/Boolean/61_laravel-api/laravel-api/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/matteogenovese/Programmazione/Boolean/62_laravel-boolpress/laravel-boolpress/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/matteogenovese/Programmazione/Boolean/62_laravel-boolpress/laravel-boolpress/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
