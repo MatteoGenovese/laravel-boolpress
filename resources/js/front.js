@@ -11,6 +11,6 @@ import router from './router';
 
 const app = new Vue({
     el: '#root',
-    render: h = h(App), // mostriamo• App all'avvio•di-Vue
+    render: h => h(App), // mostriamo App all'avvio di Vue
     router
 });
