@@ -27,7 +27,7 @@ Route:: namespace( 'api')->group(function(){
     Route::get('/tags/{id}', 'TagController@show');
 
     Route::get('/categories', 'CategoryController@index');
-    Route::get('/categories/{id}', 'CategoryController@show');
+    Route::get('/categories/{id}', 'CategoryController@showCategoryPost');
 });
 
 

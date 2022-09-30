@@ -30,7 +30,7 @@
     import PostCard from '../components/PostCard.vue';
 
 export default {
-    name: 'HomePage',
+    name: 'SinglePost',
     components:{
         PostCard,
     },
@@ -44,11 +44,10 @@ export default {
     methods: {
         getPost(){
             const id= this.$route.params.id;
-            axios.get(`/api/posts/`,{
-
-
-            }).then((response) => {
+            axios.get(`/api/posts/${id}`)
+            .then((response) => {
                 this.post = response.data.results.data;
+                console.log(this.post);
                 this.postLoading = false;
             }).catch((error) => {
                 console.error(error);
