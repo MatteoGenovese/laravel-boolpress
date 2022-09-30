@@ -4,6 +4,7 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -54,15 +55,28 @@ class CategoryController extends Controller
     {
     $category = Category::with('posts')->find($id);
 
-    if ($category) {
-        return response()->json([
-            'reponse' => true,
-            "results" => [
-                'data' => $category,
-            ]
-        ]);
+        if ($category) {
+            return response()->json([
+                'reponse' => true,
+                "results" => [
+                    'data' => $category,
+                ]
+            ]);
+        }
+        else return response('', 404);
     }
-    else return response('', 404);
+
+    public function showCategoryPost($id)
+    {
+        $posts = Post::with('user', 'category')->where('category_id' , $id)->get();
+
+        if ($posts) {
+            return response()->json([
+                'reponse' => true,
+                "results" => $posts,
+            ]);
+        }
+        else return response('', 404);
     }
 
     /**
